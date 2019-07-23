@@ -1,4 +1,5 @@
 @import 'config';
+@import 'item-grid';
 @import 'utilities';
 
 // General Styles
@@ -272,6 +273,53 @@ img { width: 100%; }
         margin-right: .5rem;
         border-radius: 50%;
       }
+    }
+  }
+}
+
+// Contact Page
+#contact {
+  // Contact A
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        'name email'
+        'subject phone'
+        'message message';
+      grid-gap: 1.2rem;
+      margin-bottom: 1.2rem;
+
+      // Grid Areas
+      .name-input { grid-area: name; }
+      .subject-input { grid-area: subject; }
+      .email-input { grid-area: email; }
+      .phone-input { grid-area: phone; }
+      .message-input {
+        grid-area: message;
+        height: 100px;
+      }
+
+      .text-input { padding: .5rem 1rem; }
+    }
+
+    button[type='submit'] { width: 50%; }
+  }
+
+  // Contact B
+  &-b {
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+    }
+  }
+
+  // Contact C
+  &-c {
+    h1 {
+      font-size: 4rem;
+      text-align: center;
     }
   }
 }
