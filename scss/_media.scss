@@ -1,0 +1,133 @@
+// Tablets & Smaller
+@media(max-width: 800px) {
+  #header-home {
+    height: 30rem;
+
+    .header-content { padding-top: 5rem; }
+  }
+}
+
+// Smartphones
+@media(max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+
+    li { padding: 1rem; }
+  }
+
+  #header {
+    &-home {
+      height: 10rem;
+      background-position: 20% 30%;
+      border-bottom: 3px solid $main-color;
+
+      .header-content { display: none; }
+    }
+
+    &-inner { height: 10rem; }
+  }
+
+  // Stack Grid Columns
+  #home-a .specials,
+  #home-b .stats,
+  #home-c .process,
+  #about-d .testimonials,
+  #contact-b .contact-info,
+  .items {
+    grid-template-columns: 1fr;
+  }
+
+  // Home
+  #home {
+    &-a {
+      .specials div {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $light-color;
+
+        &:last-child {
+          padding-bottom: 0;
+          border: none;
+        }
+      }
+    }
+
+    &-b {
+      .stats div { padding: 2rem 0 1rem 0; }
+    }
+  }
+
+  // About
+  #about {
+    &-a {
+      .about-info {
+        grid-template-areas: 
+          'bioimage'
+          'bio'
+          'aw1'
+          'aw2'
+          'aw3';
+      }
+    }
+
+    &-c { display: none; }
+  }
+
+  // Contact
+  #contact {
+    &-a {
+      .text-fields {
+        grid-template-areas: 
+          'name'
+          'subject'
+          'email'
+          'phone'
+          'message';
+      }
+    }
+
+    &-b {
+      div {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #555;
+
+        &:last-child {
+          padding-bottom: 0;
+          margin-bottom: 0;
+          border: none;
+        }
+      }
+    }
+
+    &-c {
+      h1 {font-size: 2rem; }
+    }
+  }
+
+  // Footer
+  #main-footer {
+    height: 7rem;
+
+    .footer-content {
+      flex-direction: column;
+      height: 5rem;
+      padding: 1rem;
+    }
+  }
+}
+
+// Landscape
+@media(max-height: 580px) {
+  #header-home {
+    .header-content { padding-top: 3rem; }
+  }
+}
+
+@media(max-height: 320px) {
+  #header-home {
+    .header-content {
+      h1 { font-size: 2rem; }
+    }
+  }
+}
