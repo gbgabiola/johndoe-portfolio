@@ -1,0 +1,21 @@
+{
+  "name": "modern-portfolio",
+  "version": "1.0.0",
+  "description": "Modern portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genesisgabiola/johndoe-portfolio.git"
+  },
+  "author": "Genesis Gabiola",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/genesisgabiola/johndoe-portfolio/issues"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
